@@ -1,175 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
-    <title>TailWind</title>
-</head>
-<body>
+    <title>TailWind Responsive Website</title>
+  </head>
+  <body>
     <!-- Navigation Bar -->
-<div class="w-full text-gray-700 bg-white">
-  <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-    <div class="p-4 flex flex-row items-center justify-between">
-      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-3xl">A very nice Title</a>
-      <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-</svg>
-      </button>
+    <div class="w-full text-gray-700 bg-white">
+      <div
+        x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+      >
+        <div class="p-4 flex flex-row items-center justify-between">
+          <a
+            href="#"
+            class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline text-3xl"
+            >A very nice Title</a
+          >
+          <button
+            class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row"
+        >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#"
+            >Test1</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#"
+            >Test2</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#"
+            >Test3</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#"
+            >Test4</a
+          >
+        </nav>
+      </div>
     </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Test1</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Test2</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Test3</a>
-      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Test4</a>
-          </div>    
-    </nav>
-  </div>
-</div>
-        
-<div>
-  <img src="./sunset-2021266_1920.jpg" alt="Responsive image" />
-</div>
+    <!-- End of Navigation Bar -->
 
-<div class="flex justify-center width: 100%; text-center p-10 bg-gray-100">
-    <div class="w-2/3">
-    <h2 class="text-3xl">Lets make some text</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut recusandae aperiam quidem beatae ex nisi, tenetur impedit, animi voluptate at voluptatibus, ea minus distinctio ipsum sequi id sunt soluta. </p>
-</div>
-</div>
+    <!-- Main Section -->
+    <div>
+      <img src="./sunset-2021266_1920.jpg" alt="Responsive image" />
+    </div>
+    <!-- End of Main Section -->
 
-<div class="container my-12 mx-auto px-4 md:px-12">
-  <div class="flex flex-wrap -mx-1 lg:-mx-4">
-      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-          <article class="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                  <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-              </a>
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                  <h1 class="text-lg">
-                      <a class="no-underline hover:underline text-black" href="#">
-                          Article Title
-                      </a>
-                  </h1>
-                  <p class="text-grey-darker text-sm">
-                      title
-                  </p>
-              </header>
-              <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a class="flex items-center no-underline hover:underline text-black" href="#">
-                      <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                      <p class="ml-2 text-sm">
-                          Published by
-                      </p>
-                  </a>
-                  <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                      <span class="hidden">Like</span>
-                      <i class="fa fa-heart"></i>
-                  </a>
-              </footer>
-          </article>
+    <!-- Text Container -->
+    <div class="flex justify-center width: 100%; text-center p-10 bg-gray-100">
+      <div class="w-2/3">
+        <h2 class="text-2xl">Lets make some text</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aut
+          recusandae aperiam quidem beatae ex nisi, tenetur impedit, animi
+          voluptate at voluptatibus, ea minus distinctio ipsum sequi id sunt
+          soluta.
+        </p>
       </div>
-      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    </div>
+    <!-- End of Text Container -->
+
+    <!-- Cards Container -->
+    <div class="container my-12 mx-auto px-4 md:px-12">
+      <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        <!-- Card -->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
           <article class="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                  <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-              </a>
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                  <h1 class="text-lg">
-                      <a class="no-underline hover:underline text-black" href="#">
-                          Article Title
-                      </a>
-                  </h1>
-                  <p class="text-grey-darker text-sm">
-                    title
-                  </p>
-              </header>
-              <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a class="flex items-center no-underline hover:underline text-black" href="#">
-                      <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                      <p class="ml-2 text-sm">
-                          Author Name
-                      </p>
-                  </a>
-                  <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                      <span class="hidden">Like</span>
-                      <i class="fa fa-heart"></i>
-                  </a>
-              </footer>
-          </article>
-      </div>
-      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-          <article class="overflow-hidden rounded-lg shadow-lg">
-              <a href="#">
-                  <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-              </a>
-              <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                  <h1 class="text-lg">
-                      <a class="no-underline hover:underline text-black" href="#">
-                          Article Title
-                      </a>
-                  </h1>
-                  <p class="text-grey-darker text-sm">
-                      11/1/19
-                  </p>
-              </header>
-              <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                  <a class="flex items-center no-underline hover:underline text-black" href="#">
-                      <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                      <p class="ml-2 text-sm">
-                          Author Name
-                      </p>
-                  </a>
-                  <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                      <span class="hidden">Like</span>
-                      <i class="fa fa-heart"></i>
-                  </a>
-              </footer>
-          </article>
-      </div>
-      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-        <article class="overflow-hidden rounded-lg shadow-lg">
             <a href="#">
-                <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
+              <img
+                alt="Placeholder"
+                class="block h-auto w-full"
+                src="https://picsum.photos/400/200/?random"
+              />
             </a>
-            <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                <h1 class="text-lg">
-                    <a class="no-underline hover:underline text-black" href="#">
-                        Article Title
-                    </a>
-                </h1>
-                <p class="text-grey-darker text-sm">
-                  title
-                </p>
+            <header
+              class="flex items-center justify-between leading-tight p-2 md:p-4"
+            >
+              <h1 class="text-lg">
+                <a class="no-underline hover:underline text-black" href="#">
+                  Article Title
+                </a>
+              </h1>
+              <p class="text-grey-darker text-sm">title</p>
             </header>
-            <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                <a class="flex items-center no-underline hover:underline text-black" href="#">
-                    <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                    <p class="ml-2 text-sm">
-                        Author Name
-                    </p>
+          </article>
+        </div>
+        <!-- End of Card -->
+
+        <!-- Card -->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <a href="#">
+              <img
+                alt="Placeholder"
+                class="block h-auto w-full"
+                src="https://picsum.photos/400/200/?random"
+              />
+            </a>
+            <header
+              class="flex items-center justify-between leading-tight p-2 md:p-4"
+            >
+              <h1 class="text-lg">
+                <a class="no-underline hover:underline text-black" href="#">
+                  Article Title
                 </a>
-                <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                    <span class="hidden">Like</span>
-                    <i class="fa fa-heart"></i>
+              </h1>
+              <p class="text-grey-darker text-sm">title</p>
+            </header>
+          </article>
+        </div>
+        <!-- End of Card -->
+
+        <!-- Card -->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <a href="#">
+              <img
+                alt="Placeholder"
+                class="block h-auto w-full"
+                src="https://picsum.photos/400/200/?random"
+              />
+            </a>
+            <header
+              class="flex items-center justify-between leading-tight p-2 md:p-4"
+            >
+              <h1 class="text-lg">
+                <a class="no-underline hover:underline text-black" href="#">
+                  Article Title
                 </a>
-            </footer>
-        </article>
+              </h1>
+              <p class="text-grey-darker text-sm">title</p>
+            </header>
+          </article>
+        </div>
+        <!-- End of Card -->
+
+        <!-- Card -->
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+          <article class="overflow-hidden rounded-lg shadow-lg">
+            <a href="#">
+              <img
+                alt="Placeholder"
+                class="block h-auto w-full"
+                src="https://picsum.photos/400/200/?random"
+              />
+            </a>
+            <header
+              class="flex items-center justify-between leading-tight p-2 md:p-4"
+            >
+              <h1 class="text-lg">
+                <a class="no-underline hover:underline text-black" href="#">
+                  Article Title
+                </a>
+              </h1>
+              <p class="text-grey-darker text-sm">title</p>
+            </header>
+          </article>
+        </div>
+        <!-- End of Card -->
+      </div>
     </div>
-  </div>
-</div>
+    <!-- End of Cards Container -->
 
-<!-- Footer -->
-<footer class='w-full text-center border-t border-grey p-4 pin-b'>
-  This is our footer
-</footer>
+    <!-- Footer -->
 
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <footer class="w-full text-center border-t border-grey p-5 pin-b">
+      Footer
+    </footer>
+    <!-- End of Footer -->
 
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+  </body>
 </html>
-
-
