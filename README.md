@@ -4,4 +4,6 @@
 
 A simple and quick responsive webpage using Tailwind framework.
 
+Deployed version can be found [here](https://inspiring-ritchie-49ef51.netlify.app)
+
 This is an example on how a style framework can save a considerable amount of time when styling a website.
